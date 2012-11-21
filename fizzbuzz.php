@@ -6,7 +6,32 @@
 <!--Form For getting input and Display Results-->
 
 <title>numberdisplay</title>
-
+<script>
+function loadXMLDoc()
+{
+//AJAX
+var from=document.getElementById("txtfrom").value;
+var to=document.getElementById("txtto").value;
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("resp").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","ajax.php?from="+from+"&to="+to,true);
+xmlhttp.send();
+}  
+</script>
 </head>
 <body>
 <form name="numdisplay" id="numdisplay" method="get">
