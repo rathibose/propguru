@@ -5,6 +5,8 @@ $from=$_GET["from"];
 $to=$_GET["to"];
 for($i=$from;$i<=$to;$i++)
 {
+if((($i%3)==0)&(($i%5)==0))
+$range[]="FizzBuzz";
 if(($i%3)==0)
 $range[]="Fizz";
 else if(($i%5)==0)
