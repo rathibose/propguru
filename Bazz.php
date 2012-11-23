@@ -73,8 +73,8 @@ display<br>
         </td>
       </tr>
       <tr>
-        <td style="vertical-align: top; width: 292px;">From : <input name="txtfrom" id="txtfrom" onkeyup="this.value=this.value.replace(/\D/,'')"></td>
-        <td style="vertical-align: top; width: 292px;">To : <input name="txtto" id="txtto" onkeyup="this.value=this.value.replace(/\D/,'')"><br>
+        <td style="vertical-align: top; width: 292px;">From : <input name="txtfrom" id="txtfrom" maxlength="4" onkeyup="this.value=this.value.replace(/\D/,'')"></td>
+        <td style="vertical-align: top; width: 292px;">To : <input name="txtto" id="txtto" maxlength="4" onkeyup="this.value=this.value.replace(/\D/,'')"><br>
         </td>
       </tr>
       <tr align="center">

@@ -12,7 +12,7 @@ if(($i%3)==0)
 else if(($i%5)==0)
 	$range[]="Buzz";
 else
-	$range[]=$i." ";
+	$range[]=(int)$i." ";
 }
 
 for($j=0;$j<($to-$from);$j++)
