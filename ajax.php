@@ -12,7 +12,7 @@ $range[]="Fizz";
 else if(($i%5)==0)
 $range[]="Buzz";
 else
-$range[]=$i." ";
+$range[]=(int)$i." ";
 
 }
 $response=$range;

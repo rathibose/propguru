@@ -1,31 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
   
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>numberdisplay</title>
-
-  
-  
-  <style type="text/css">
-.line1 {
-  background-color: silver;
-}
-.line2 {
-  border-style: dotted;
-  background-color: #e9e9e9;
-}
-
-  </style>
-  
-  <script>
-
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>numberdisplay</title>
+<script>
 function callfunctions()
 {
 var b=positiveInt();
 if(b) loadXMLDoc();
 return b;
 }
-
 function positiveInt()
 {
 //To check if input is valid positive integer
@@ -76,10 +60,10 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("GET","ajax.php?from="+from+"&to="+to,true);
 xmlhttp.send();
 }  
-  </script>
+ </script>
 </head><body>
 <form name="numdisplay" id="numdisplay" method="get">
-  <table style="text-align: left; width: 604px; height: 149px;" border="1" cellpadding="2" cellspacing="2">
+  <table style="text-align: left; width: 604px; height: 149px;" border="1" cellpadding="2" cellspacing="2" align="center">
     <tbody>
       <tr>
         <td colspan="2" rowspan="1" style="vertical-align: top; width: 292px;">Enter range of numbers to
@@ -87,16 +71,16 @@ display<br>
         </td>
       </tr>
       <tr>
-        <td style="vertical-align: top; width: 292px;">From : <input name="txtfrom" id="txtfrom" onkeyup="this.value=this.value.replace(/\D/,'')"></td>
-        <td style="vertical-align: top; width: 292px;">To : <input name="txtto" id="txtto" onkeyup="this.value=this.value.replace(/\D/,'')"><br>
+        <td style="vertical-align: top; width: 292px;" class="line1">From : <input name="txtfrom" id="txtfrom" maxlength="4" onkeyup="this.value=this.value.replace(/\D/,'')"></td>
+        <td style="vertical-align: top; width: 292px;" class="line1">To : <input name="txtto" id="txtto" maxlength="4" onkeyup="this.value=this.value.replace(/\D/,'')"><br>
         </td>
       </tr>
       <tr align="center">
-        <td colspan="2" rowspan="1" style="vertical-align: top; width: 292px;"><input name="submit" value="Display" onclick="callfunctions()" type="button"><br>
+        <td colspan="2" rowspan="1" style="vertical-align: top; width: 292px;" class="line2"><input name="submit" value="Display" onclick="callfunctions()" type="button"><br>
         </td>
       </tr>
       <tr>
-        <td colspan="2" rowspan="1" style="vertical-align: top; width: 292px;" id="resp"><br>
+        <td colspan="2" rowspan="1" style="vertical-align: top; width: 292px;" id="resp" class="line1"><br>
         </td>
       </tr>
     </tbody>
@@ -104,5 +88,5 @@ display<br>
   <br>
   <br>
 </form>
-
-</body></html>
+</body>
+</html>
